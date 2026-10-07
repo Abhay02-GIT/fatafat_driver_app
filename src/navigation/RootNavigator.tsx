@@ -1,5 +1,12 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+import EarningsActivityScreen from '@/screens/EarningsActivityScreen';
+import HelpSupportScreen from '@/screens/HelpSupportScreen';
+import NotificationsScreen from '@/screens/NotificationsScreen';
+import PayoutHistoryScreen from '@/screens/PayoutHistoryScreen';
+import ReferARiderScreen from '@/screens/ReferARiderScreen';
+import SafetyCentreScreen from '@/screens/SafetyCentreScreen';
+import TripDetailsScreen from '@/screens/TripDetailsScreen';
 import BecomeRiderScreen from '@/screens/auth/BecomeRiderScreen';
 import LoginScreen from '@/screens/auth/LoginScreen';
 import PayoutSetupScreen from '@/screens/auth/PayoutSetupScreen';
@@ -12,6 +19,8 @@ import UploadDocumentScreen from '@/screens/auth/UploadDocumentScreen';
 import VerificationPendingScreen from '@/screens/auth/VerificationPendingScreen';
 import VerificationRejectedScreen from '@/screens/auth/VerificationRejectedScreen';
 import VerifyOtpScreen from '@/screens/auth/VerifyOtpScreen';
+
+import TabNavigator from './TabNavigator';
 
 import type { RootStackParamList } from './types';
 
@@ -37,6 +46,14 @@ export default function RootNavigator() {
       <Stack.Screen name="RegisterReview" component={RegisterReviewScreen} />
       <Stack.Screen name="VerificationPending" component={VerificationPendingScreen} />
       <Stack.Screen name="VerificationRejected" component={VerificationRejectedScreen} />
+      <Stack.Screen name="Tabs" component={TabNavigator} />
+      <Stack.Screen name="Notifications" component={NotificationsScreen} />
+      <Stack.Screen name="TripDetails" component={TripDetailsScreen} />
+      <Stack.Screen name="EarningsActivity" component={EarningsActivityScreen} />
+      <Stack.Screen name="PayoutHistory" component={PayoutHistoryScreen} />
+      <Stack.Screen name="SafetyCentre" component={SafetyCentreScreen} />
+      <Stack.Screen name="HelpSupport" component={HelpSupportScreen} />
+      <Stack.Screen name="ReferARider" component={ReferARiderScreen} />
     </Stack.Navigator>
   );
 }

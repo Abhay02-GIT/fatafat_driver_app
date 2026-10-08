@@ -1,4 +1,4 @@
-package com.myapp
+package com.fatafatdriver
 
 import android.app.Application
 import com.facebook.react.PackageList
